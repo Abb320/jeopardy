@@ -1,0 +1,192 @@
+:root {
+  --bg: #000;
+  --blue: #1b4fd1;
+  --blue-2: #133aa0;
+  --text: #fff;
+  --muted: #9bb3ff;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.screen { width: min(1100px, 96vw); }
+.hidden { display: none; }
+
+h1 {
+  margin: 24px 0 16px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.game-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.btn, .game-btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  background: var(--blue);
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: .3px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform .03s ease, filter .15s ease;
+}
+.btn.small { padding: 10px 14px; border-radius: 10px; font-weight: 700; }
+.btn:hover, .game-btn:hover { filter: brightness(1.1); }
+.btn:active, .game-btn:active { transform: translateY(1px); }
+.game-btn .topic { display: block; font-size: 1.05rem; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0 12px;
+}
+.title { font-weight: 800; color: var(--muted); }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  /* was 6 */
+  gap: 10px;
+}
+
+
+.cat {
+  background: var(--blue-2);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.tile {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 12px;
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+}
+.tile:disabled {
+  opacity: .4;
+  cursor: default;
+}
+
+/* existing vars and styles above … */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cols */
+  gap: 10px;
+}
+
+/* Q/A screen */
+.qaWrap {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+}
+
+.qaCard {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: min(800px, 92vw);
+  display: grid;
+  gap: 12px;
+}
+
+.qaMeta {
+  display: flex;
+  justify-content: space-between;
+  opacity: .85;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.qaText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  padding: 8px 6px 2px;
+}
+
+.qaControls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+#qaInput {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.qaFeedback {
+  min-height: 24px;
+  font-weight: 700;
+}
+
+.qaActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* reuse .btn, .screen, etc. from before */
+.playerBar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.player.active {
+  color: var(--gold);
+  text-shadow: 0 0 6px var(--gold);
+}
+
+
+.turnIndicator {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 8px 0 14px;
+  color: var(--gold);
+  text-shadow: 0 0 6px rgba(255, 204, 0, 0.5);
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Jeopardy – Start</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="start" class="screen">
+    <h1>Choose a Game</h1>
+    <div class="game-buttons" id="gameButtons"></div>
+  </div>
+
+  <div id="boardScreen" class="screen hidden">
+    <div class="topbar">
+      <div class="title"><span id="selectedGame"></span></div>
+      <button id="backBtn" class="btn small">Back</button>
+    </div>
+    <div id="turnIndicator" class="turnIndicator"></div>
+    <div id="board" class="board"></div>
+    <div id="playerBar" class="playerBar">
+      <div class="player" id="p1">Player 1: <span id="p1Score">0</span></div>
+      <div class="player" id="p2">Player 2: <span id="p2Score">0</span></div>
+    </div>
+
+  </div>
+
+  <!-- Q/A screen -->
+  <div id="questionScreen" class="screen hidden">
+    <div class="qaWrap">
+      <div id="qCard" class="qaCard">
+        <div class="qaMeta">
+          <span id="qaCat"></span>
+          <span id="qaVal"></span>
+        </div>
+        <div id="qaQuestion" class="qaText"></div>
+        <div class="qaControls">
+          <input id="qaInput" type="text" placeholder="Type your answer…" />
+          <button id="qaSubmit" class="btn">Submit</button>
+        </div>
+        <div id="qaFeedback" class="qaFeedback"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- RESULT screen -->
+<div id="resultScreen" class="screen hidden">
+  <div class="qaWrap">
+    <div class="qaCard">
+      <div class="qaMeta">
+        <span id="resCat"></span>
+        <span id="resVal"></span>
+      </div>
+      <div id="resText" class="qaText"></div>
+      <div class="qaActions">
+        <button id="resBack" class="btn small">Back to Board</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="games.js"></script>
+  <script src="game-logic.js"></script>
+  <script src="player-logic.js"></script> 
+  <script src="main.js"></script>
+</body>
+</html>
