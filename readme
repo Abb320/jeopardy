@@ -1,0 +1,138 @@
+Jeopardy Web Game
+
+This project is a browser-based Jeopardy game implemented using HTML, CSS, and JavaScript. It includes multiple preset trivia sets, a complete question-and-answer flow, two-player scoring, and turn-based logic.
+
+The project is hosted online at:
+https://abb320.github.io/jeopardy/
+
+It can also be run locally by opening index.html in any modern web browser.
+
+How to Run Locally
+
+Download or clone the repository.
+
+Open the file: index.html
+
+No build tools, servers, or external dependencies are required.
+
+Project Structure
+
+index.html
+styles.css
+games.js
+main.js
+game-logic.js
+player-logic.js
+
+Each file has a specific role in the application, described below.
+
+File Descriptions
+
+index.html
+The primary HTML entry point. It contains all UI screens:
+
+Game selection screen
+
+Board screen
+
+Question screen
+
+Result screen
+
+It loads the JavaScript files in the required order:
+
+games.js
+
+player-logic.js
+
+game-logic.js
+
+main.js
+
+This file defines the structure and containers but does not implement any logic.
+
+styles.css
+Defines all styling for the application, including the game board grid, buttons, colors, typography, question card layouts, result screen, player display, and turn indicator.
+This file contains only CSS and no programming logic.
+
+games.js
+Contains all trivia data used by the game. It defines four game sets:
+
+Nintendo
+
+Pokémon
+
+Minecraft
+
+Blank template for custom sets
+
+Each game includes:
+
+A topic name
+
+Five categories
+
+Five question–answer pairs per category
+
+Example structure:
+
+{
+topic: "Nintendo stuff",
+categories: {
+"Mario": {
+"Mario's brother?": "Luigi"
+}
+}
+}
+
+The file attaches the game data to window.GAMES so other scripts can access it.
+
+main.js
+Handles board rendering and navigation flow. Responsibilities include:
+
+Displaying the game selection menu
+
+Loading categories and question tiles
+
+Rendering the 5x5 question grid
+
+Handling tile clicks and passing question data to game-logic.js
+
+This file does not handle scoring or answer checking.
+
+game-logic.js
+Controls question and answer behavior. Responsibilities include:
+
+Retrieving the correct question and answer for a selected tile
+
+Displaying the question screen
+
+Normalizing user input (lowercasing, removing whitespace)
+
+Comparing user answers with the correct answer
+
+Disabling tiles after use
+
+Switching to the result screen
+
+Calling player-logic.js to apply scoring
+
+Determining whether the player keeps their turn or loses it
+
+This file manages transitions between board, question, and result screens.
+
+player-logic.js
+Handles all player-related logic. Responsibilities include:
+
+Storing scores for Player 1 and Player 2
+
+Tracking which player's turn it is
+
+Applying scoring rules
+
+Updating player scores in the UI
+
+Updating the turn indicator display
+
+Correct answers add points and the same player continues.
+Incorrect answers subtract points and the turn switches.
