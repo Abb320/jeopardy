@@ -2,7 +2,7 @@
 // Four games: 3 preset + 1 blank.
 const GAMES = [
   {
-    topic: "Nintendo stuff",
+    topic: "Nintendo",
     categories: {
       "Mario": {
         "Mario's brother?": "Luigi",
@@ -43,7 +43,7 @@ const GAMES = [
   },
 
   {
-    topic: "Pokémon stuff",
+    topic: "Pokémon",
     categories: {
       "Starters": {
         "Grass starter in Gen 1?": "Bulbasaur",
@@ -84,7 +84,7 @@ const GAMES = [
   },
 
   {
-    topic: "Minecraft stuff",
+    topic: "Minecraft",
     categories: {
       "Blocks": {
         "Block that explodes when powered?": "TNT",
