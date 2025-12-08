@@ -71,7 +71,7 @@ const GAMES = [
         "Move that puts the foe to sleep?": "Hypnosis",
         "TM stands for?": "Technical Machine",
         "Poké Ball that never fails?": "Master Ball",
-        "Move that never misses (classic example)?": "Swift"
+        "Dialga's signature move?": "Roar of Time"
       },
       "Regions": {
         "Gen 1 region?": "Kanto",
