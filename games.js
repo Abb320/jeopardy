@@ -53,16 +53,16 @@ const GAMES = [
         "Grass starter in Gen 5?": "Snivy"
       },
       "Types & Matchups": {
-        "Fire is super-effective against?": "Grass, Ice, Bug, Steel",
+        "What is Swampert weak to": "Grass",
         "Type immune to Ground?": "Flying",
         "Type that resists both Fire and Water?": "Dragon",
         "Electric moves have no effect on?": "Ground",
-        "Fairy is weak to?": "Poison, Steel"
+        "What is Spirtomb weak to": "Fairy"
       },
       "Legendaries": {
         "Mascot of Pokémon Gold?": "Ho-Oh",
-        "Kanto legendary bird trio?": "Articuno, Zapdos, Moltres",
-        "Sinnoh creation trio?": "Dialga, Palkia, Giratina",
+        "Kanto Ice legendary bird trio?": "Articuno",
+        "Sinnoh steel creation trio?": "Dialga",
         "Time-travel mythical Pokémon?": "Celebi",
         "Alola guardian of Melemele Island?": "Tapu Koko"
       },
@@ -91,7 +91,7 @@ const GAMES = [
         "Transparent block mobs can’t spawn on?": "Glass",
         "Block used for enchanting?": "Enchanting Table",
         "Green ore used for trading?": "Emerald Ore",
-        "Fuel item commonly used early game?": "Coal (or Charcoal)"
+        "Fuel item commonly used early game?": "Coal"
       },
       "Mobs": {
         "Mob that explodes near players?": "Creeper",
@@ -109,15 +109,15 @@ const GAMES = [
       },
       "Biomes": {
         "Biome with lots of sand and no rain?": "Desert",
-        "Tall spruce & podzol biome?": "Taiga (Old Growth variants)",
+        "Tall spruce & podzol biome?": "Taiga",
         "Underground biome with azalea trees above?": "Lush Caves",
         "Nether biome with warped nylium?": "Warped Forest",
-        "Snowy biome with igloos?": "Snowy Plains (Tundra)"
+        "Snowy biome with igloos?": "Snowy Plains"
       },
       "Crafting": {
         "Planks from one log?": "4",
         "Sticks from two planks?": "4",
-        "Crafting table recipe?": "4 planks (2×2)",
+        "Crafting table recipe?": "4 wood planks",
         "Beds require planks and what?": "Wool",
         "Iron ingots needed for a bucket?": "3"
       }
